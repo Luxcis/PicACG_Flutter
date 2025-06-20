@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -15,6 +16,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get applicationThemeSettingTitle => '应用主题';
 
   @override
+  String get applicationThemeSettingDescription => '修改应用主题';
+
+  @override
   String get lightThemeOption => '浅色';
 
   @override
@@ -25,6 +29,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get languagesSettingTitle => '语言';
+
+  @override
+  String get languagesSettingDescription => '修改语言';
 
   @override
   String get languagesAppBarTitle => '语言';

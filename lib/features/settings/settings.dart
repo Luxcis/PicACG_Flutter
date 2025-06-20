@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:picacg/features/settings/language_settings.dart';
+import 'package:picacg/l10n/app_localizations.dart';
+import 'package:picacg/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_android_template/features/settings/language_settings.dart';
-import 'package:flutter_android_template/l10n/app_localizations.dart';
-import 'package:flutter_android_template/providers/theme_provider.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -10,6 +10,7 @@ class SettingsPage extends StatefulWidget {
   @override
   State createState() => _SettingsPageState();
 }
+
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
@@ -19,10 +20,11 @@ class _SettingsPageState extends State<SettingsPage> {
       title: l10n.languagesSettingTitle,
       icon: Icons.language,
       onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const LanguageSettings(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => const LanguageSettings()),
+        );
       },
+      description: l10n.languagesSettingDescription,
     );
     final themeDropdownItems = [
       DropdownMenuItem(
@@ -50,17 +52,11 @@ class _SettingsPageState extends State<SettingsPage> {
         },
       ),
       onTap: null,
+      description: l10n.applicationThemeSettingDescription,
     );
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.settingsAppBarTitle)
-      ),
-      body: ListView(
-        children: [
-          themeSettingsItem,
-          languageSettingsItem,
-        ],
-      ),
+      appBar: AppBar(title: Text(l10n.settingsAppBarTitle)),
+      body: ListView(children: [themeSettingsItem, languageSettingsItem]),
     );
   }
 }
@@ -86,9 +82,7 @@ class _SettingItem extends StatelessWidget {
       onTap: onTap,
       child: ListTile(
         title: Text(title, style: TextStyle(fontSize: 18)),
-        subtitle: description != null
-          ? Text(description!)
-          : null,
+        subtitle: description != null ? Text(description!) : null,
         leading: Icon(icon),
         trailing: editor,
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),

@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -15,6 +16,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get applicationThemeSettingTitle => 'Application theme';
 
   @override
+  String get applicationThemeSettingDescription => 'Choose application theme';
+
+  @override
   String get lightThemeOption => 'Light';
 
   @override
@@ -25,6 +29,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languagesSettingTitle => 'Languages';
+
+  @override
+  String get languagesSettingDescription => 'Choose language';
 
   @override
   String get languagesAppBarTitle => 'Languages';

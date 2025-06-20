@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:picacg/l10n/app_localizations.dart';
+import 'package:picacg/providers/language_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_android_template/l10n/app_localizations.dart';
-import 'package:flutter_android_template/providers/language_provider.dart';
 
 class LanguageSettings extends StatelessWidget {
   const LanguageSettings({super.key});

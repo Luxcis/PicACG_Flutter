@@ -2,10 +2,12 @@
   "@@locale": "en",
   "settingsAppBarTitle": "Settings",
   "applicationThemeSettingTitle": "Application theme",
+  "applicationThemeSettingDescription": "Choose application theme",
   "lightThemeOption": "Light",
   "darkThemeOption": "Dark",
   "systemThemeOption": "System",
   "languagesSettingTitle": "Languages",
+  "languagesSettingDescription": "Choose language",
   "languagesAppBarTitle": "Languages",
   "systemLanguageOption": "System"
 }

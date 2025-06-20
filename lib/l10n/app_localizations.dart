@@ -6,8 +6,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
-import 'app_localizations_fr.dart';
-import 'app_localizations_ja.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
@@ -97,8 +95,6 @@ abstract class AppLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('fr'),
-    Locale('ja'),
     Locale('zh'),
   ];
 
@@ -113,6 +109,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Application theme'**
   String get applicationThemeSettingTitle;
+
+  /// No description provided for @applicationThemeSettingDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose application theme'**
+  String get applicationThemeSettingDescription;
 
   /// No description provided for @lightThemeOption.
   ///
@@ -138,6 +140,12 @@ abstract class AppLocalizations {
   /// **'Languages'**
   String get languagesSettingTitle;
 
+  /// No description provided for @languagesSettingDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose language'**
+  String get languagesSettingDescription;
+
   /// No description provided for @languagesAppBarTitle.
   ///
   /// In en, this message translates to:
@@ -162,7 +170,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['en', 'fr', 'ja', 'zh'].contains(locale.languageCode);
+      <String>['en', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -173,10 +181,6 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   switch (locale.languageCode) {
     case 'en':
       return AppLocalizationsEn();
-    case 'fr':
-      return AppLocalizationsFr();
-    case 'ja':
-      return AppLocalizationsJa();
     case 'zh':
       return AppLocalizationsZh();
   }

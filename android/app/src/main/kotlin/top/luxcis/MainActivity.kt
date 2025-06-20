@@ -1,4 +1,4 @@
-package com.example.template
+package top.luxcis
 
 import io.flutter.embedding.android.FlutterActivity
 
